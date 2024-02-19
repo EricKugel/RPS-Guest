@@ -12,8 +12,8 @@ public class Main extends JFrame {
 
     public static final int WIDTH = 500;
     public static final int HEIGHT = 500;
-    public static final int ZOOMINESS = 3;
-    public static final int threshold = 1;
+    public static final int ZOOMINESS = 1;
+    public static final int threshold = 2;
 
     public static final int FPS = 64;
 
