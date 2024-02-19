@@ -53,8 +53,25 @@ public class Cell {
             }
         }
 
-        Cell randomCell = neighbors.get((int) (Math.random() * neighbors.size()));
-        return randomCell.beats(this) ? randomCell.getState() : this.getState();
+        int neighborsThatBeat = 0;
+        for (Cell neighbor : neighbors) {
+            if (neighbor.beats(this)) neighborsThatBeat++;
+        }
+
+        return (neighborsThatBeat > Main.threshold ? this.getWinningState() : this.state);
+    }
+
+    public String getWinningState() {
+        switch (this.state) {
+            case "R":
+                return "P";
+            case "P":
+                return "S";
+            case "S":
+                return "R";
+            default:
+                return "Asdafiosad;o a;djs";
+        }
     }
 
     public Color getColor() {

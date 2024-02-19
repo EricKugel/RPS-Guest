@@ -12,14 +12,15 @@ public class Main extends JFrame {
 
     public static final int WIDTH = 500;
     public static final int HEIGHT = 500;
-    public static final int ZOOMINESS = 1;
+    public static final int ZOOMINESS = 3;
+    public static final int threshold = 1;
 
-    public static final int FPS = 24;
+    public static final int FPS = 64;
 
     private Cell[][] cells = new Cell[HEIGHT][WIDTH];
 
     public Main() {
-        setTitle("RPS Simulator");
+        setTitle("RPS-Guest");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setVisible(true);
